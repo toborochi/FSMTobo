@@ -14,7 +14,7 @@
 > * ```Physics Script```: It runs all the time. The physics or movements that respond to keyboard input is done here.
 > * ```Exit Script```: It runs once just like the ```Enter Script``` when the state changes.
 
- 2. After that create an object that will be your state and add the following code:
+ 2. After that create an object (let's call it ```oState```) that will be your state and add the following code:
  
  **Create Event:**
  
