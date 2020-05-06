@@ -7,7 +7,7 @@
  
  ### Creating States
 
-1. After that you need to create some states. Each state is an object that is instantiated when the **FSM** is created. To create a state you have to create four scripts. (You can name it whatever you want.)
+1. Each state is an object that is instantiated when the **FSM** is created. To create a state you have to create four scripts. (You can name it whatever you want.)
 
 > * ```Enter Script```: It runs when the state is entered. This means that it runs once upon entering a state.
 > * ```Input Script```: It runs all the time. Keyboard inputs could be handled here.
