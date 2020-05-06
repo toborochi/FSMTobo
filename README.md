@@ -42,12 +42,12 @@ FSMStateCleanUp();
 FSMInitialize();
 
 // All states of the FSM
-var myState1 = instance_create_layer(0,0,"Instances",oState);
+var myState1 = instance_create_layer(0,0,"Instances",oState1);
 var myState2 = instance_create_layer(0,0,"Instances",oState2);
 // etc...
 
 // Starting state
-current = myState;
+current = myState1;
 ```
  **Step Event:**
  ```gml
@@ -57,7 +57,7 @@ current = myState;
 ## Transitions
 So far we have a FSM and a set of states. But there is still no relationship between states. Each state can have several edges and each one can have a different condition. To solve this, for every edge that has a state there must be a script that returns a **boolean** that indicates when it should change to another state. If it returns true, it changes to the state to which it is related. 
 
-For example, if we want to add a transition between two states ```oState1``` and ```oState2```, we could create a script called ```State1ToState2```. In this script it would go all the conditions to go from state ```State1``` to ```State2```.
+For example, if we want to add a transition between two states ```myState1``` and ```myState2```, we could create a script called ```State1ToState2```. In this script it would go all the conditions to go from state ```State1``` to ```State2```.
 
 1. So, after the **Create Event** code we put the transitions (It would look something like this):
 ```gml
@@ -72,6 +72,8 @@ var myState2 = instance_create_layer(0,0,"Instances",oState2);
 // Starting state
 current = myState;
 
-// Transitions
-FSMAddTransition(oState1,State1ToState2,oState2)
+// Transitions (state, conditions, state to go)
+FSMAddTransition(myState1,State1ToState2,myState2)
 ```
+
+PS: Sorry for my English, but it is not my mother tongue. :P
