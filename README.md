@@ -30,3 +30,26 @@ FSMStateInitialize(
 ```gml
 FSMStateCleanUp();
 ```
+
+
+
+ ### SetUp your FSM
+ 1. Create an object that will be you **FSM** and add the following code:
+ 
+ **Create Event:**
+ ```gml
+//Initialize the FSM
+FSMInitialize();
+
+// All states of the FSM
+var myState = instance_create_layer(0,0,"Instances",oState);
+var myState2 = instance_create_layer(0,0,"Instances",oState2);
+// etc...
+
+// Starting state
+current = myState;
+```
+ **Step Event:**
+ ```gml
+ FSMLoop(current,self);
+ ```
