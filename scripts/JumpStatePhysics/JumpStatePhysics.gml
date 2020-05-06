@@ -1,0 +1,1 @@
+x+= move * hspeed_;

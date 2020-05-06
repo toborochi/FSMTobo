@@ -1,0 +1,1 @@
+return move!=0
